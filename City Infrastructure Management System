@@ -1,0 +1,29 @@
+# Question 1 
+# Task 1 
+
+class Vehicle:
+    def __init__(self, reg_num, type, owner):
+        self.registration_number = reg_num
+        self.type = type
+        self.owner = owner
+    
+    def update_owner(self, new_owner):
+        self.owner = new_owner
+
+    def vehicle_type(self):
+        return f"The vehicle type is {self.type}"
+
+# Creating instances of Vehicle
+vehicle1 = Vehicle("ABC123", "Car", "John Doe")
+vehicle2 = Vehicle("XYZ789", "Truck", "Jane Smith")
+
+# Demonstrating changing the owner
+print(f"Original owner of vehicle1: {vehicle1.owner}")
+vehicle1.update_owner("Alice Johnson")
+print(f"New owner of vehicle1: {vehicle1.owner}")
+print(vehicle1.vehicle_type())
+
+print(f"Original owner of vehicle2: {vehicle2.owner}")
+vehicle2.update_owner("Bob Brown")
+print(f"New owner of vehicle2: {vehicle2.owner}")
+print(vehicle2.vehicle_type())
