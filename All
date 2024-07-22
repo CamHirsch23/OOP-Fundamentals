@@ -26,3 +26,32 @@ print(f"Updated participant count for event1: {event1.get_participant_count()}")
 print(f"Initial participant count for event2: {event2.get_participant_count()}")
 event2.add_participant()
 print(f"Updated participant count for event2: {event2.get_participant_count()}")
+
+# Question 2
+# Task 1 
+
+class Event:
+    def __init__(self, name, date):
+        self.name = name
+        self.date = date
+        self.participant_count = 0
+    
+    def add_participant(self):
+        self.participant_count += 1
+    
+    def get_participant_count(self):
+        return self.participant_count
+
+# Creating instances of Event
+event1 = Event("Music Concert", "2023-12-01")
+event2 = Event("Art Exhibition", "2023-12-15")
+
+# Demonstrating adding participants
+print(f"Initial participant count for event1: {event1.get_participant_count()}")
+event1.add_participant()
+event1.add_participant()
+print(f"Updated participant count for event1: {event1.get_participant_count()}")
+
+print(f"Initial participant count for event2: {event2.get_participant_count()}")
+event2.add_participant()
+print(f"Updated participant count for event2: {event2.get_participant_count()}")
